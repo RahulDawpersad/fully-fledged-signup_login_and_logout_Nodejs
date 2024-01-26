@@ -1,13 +1,13 @@
 const mysql = require("mysql2");
 
-const db = mysql.createConnection({
-  host: "b3j3ueoaxfknmx0du16n-mysql.services.clever-cloud.com",
-  user: "ukvxj5gys9pcsfkj",
-  password: "csj17lHJGWlS5FEktS3u",
-  database: "b3j3ueoaxfknmx0du16n",
+const pool = mysql.createPool({
+  host: "byi0vexuchxu9przocoh-mysql.services.clever-cloud.comt",
+  user: "uwobtzryrgmrgxco",
+  password: "a9DB90uAeqRGvnElEEYf",
+  database: "byi0vexuchxu9przocoh",
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
 });
 
-module.exports = {
-  promise: db.promise().bind(db), // Export the promise wrapper for using async/await
-};
-
+module.exports = pool.promise();

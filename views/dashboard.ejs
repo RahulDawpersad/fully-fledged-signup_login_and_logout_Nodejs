@@ -26,17 +26,17 @@
 
 <body>
 
- <!-- Preloader -->
- <div class="wrapper">
-  <div class="loader">
+  <!-- Preloader -->
+  <div class="wrapper">
+    <div class="loader">
       <div class="circle"></div>
       <div class="circle"></div>
       <div class="circle"></div>
       <div class="circle"></div>
+    </div>
   </div>
- </div>
   <!-- End of Preloader -->
-  
+
   <!--Responsive Navbar-->
   <nav class="navbar">
     <div class="navbar-container container">
@@ -539,7 +539,6 @@
     </footer>
 
     <script>
-      // Fetch user email from the server and update the dashboard
       fetch('/user/email')
         .then(response => response.json())
         .then(data => {
