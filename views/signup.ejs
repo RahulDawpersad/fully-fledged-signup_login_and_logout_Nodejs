@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <title>Signup</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- <h2>Signup</h2> -->
+      <img src="/img/designx-logo.png" class="logo" alt="logo" />
+      <form action="/signup" method="post">
+        <!-- <label for="email">Email:</label> -->
+        <% if (alertMessage) { %>
+        <div class="alert-message"><%= alertMessage %></div>
+        <% } %>
+        <input
+          type="email"
+          name="email"
+          id="email-input"
+          placeholder="Email Address"
+          oninput="this.value = this.value.trim()"
+          required
+        />
+        <span id="email-error"></span>
+        <br />
+        <!-- <label for="password">Password:</label> -->
+        <div class="password-container">
+          <input
+            type="password"
+            name="password"
+            id="password-input"
+            placeholder="Password"
+            oninput="checkPasswordStrength()"
+            required
+          />
+          <span
+            class="password-toggle"
+            onclick="togglePasswordVisibility()"
+          ></span>
+        </div>
+        <div id="password-error"></div>
+
+        <!-- ********************* -->
+        <!-- Password Rules/Policy -->
+        <div id="password-strength-indicator">
+          <progress id="strength" value="0" max="100"></progress>
+          <ul id="password-rules">
+            <li id="rule-length">At least 8 characters</li>
+            <li id="rule-uppercase">At least one uppercase letter</li>
+            <li id="rule-lowercase">At least one lowercase letter</li>
+            <li id="rule-number">At least one number</li>
+            <li id="rule-special">At least one special character</li>
+          </ul>
+        </div>
+        <!-- ************************ -->
+
+        <br />
+        <div class="password-container">
+          <input
+            type="password"
+            name="confirmPassword"
+            id="confirm-password-input"
+            placeholder="Confirm Password"
+            oninput="this.value = this.value.trim()"
+            required
+            disabled
+          />
+          <span
+            class="passwordConfirmtoggle"
+            onclick="toggleConfirmPasswordVisibility()"
+          ></span>
+        </div>
+        <div id="confirm-password-error"></div>
+        <br />
+        <input
+          type="submit"
+          value="Signup"
+          class="signup"
+          id="btn-signup"
+          disabled
+          required
+        />
+      </form>
+      <p>Already have an account? <a href="/login">Login</a></p>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

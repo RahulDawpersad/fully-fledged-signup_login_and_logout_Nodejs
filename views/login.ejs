@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <div class="main-container">
+    <!-- <h2>Login</h2> -->
+
+    <img src="/img/designx-logo.png" class="logo" alt="logo">
+  <form action="/login" method="post" id="loginForm">
+    <% if (alertMessage) { %>
+      <div class="alert-message"><%= alertMessage %></div>
+    <% } %>
+    <!-- <label for="email">Email:</label> -->
+    <input type="email" name="email" id="email-input" placeholder="Email Address" oninput="this.value = this.value.trim()" required>
+    <span id="email-error"></span>
+    <br>
+    <!-- <label for="password">Password:</label> -->
+    <div class="password-container">
+      <input type="password" name="password" id="password-input" placeholder="Password" oninput="this.value = this.value.trim()" required>
+    <span
+    class="password-toggle"
+    onclick="togglePasswordVisibility()"
+  ></span>
+    </div>
+    <span id="password-error"></span>
+    <br>
+    <input type="submit" id="btn-signup" class="signup" value="Login" required disabled />
+  </form>
+  <p>Don't have an account? <a href="/signup">Signup</a></p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+  <script src="/js/validate.js"></script>
+</body>
+</html>

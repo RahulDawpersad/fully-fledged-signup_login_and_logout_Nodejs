@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    width: auto;
+}
+
+.main-container{
+    display: grid;
+    place-items: center;
+    margin-top: 1em;
+    margin-left: 31em;
+}
+
+form{
+  display: grid;
+  place-items: center;
+  margin: 2em 0;
+}
+
+form input{
+    text-align: center;
+    background: #EFEFEF;
+    color: #000;
+}
+
+form .signup{
+    background: #616060;
+    color: #EFEFEF;
+}
+
+form input::placeholder{
+    text-align: center;
+    font-size: 1.1em;
+}
+
+form input, .signup{
+    width: 19em;
+    height: 2.9em;
+}
+
+.alert{
+    text-align: center;
+    width: 19em;
+    height: 3em;
+    margin: 1em 0;
+    padding: 0.9em 1em;
+}
+
+.valid{
+    color: green;
+}
+
+.error{
+    color: red;
+}
+
+.logo{
+    height: 200px;
+    width: 260px;
+}
+
+.password-container {
+    position: relative;
+  }
+  
+  .password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 20px;
+    background-image: url('../img/eye.svg');
+    background-size: cover;
+    cursor: pointer;
+  }
+
+  .passwordConfirmtoggle{
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 20px;
+    background-image: url('../img/eye.svg');
+    background-size: cover;
+    cursor: pointer;
+  }
+
+  /* Password Rules/Policy Styling */
+  #password-strength-indicator {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  #password-rules {
+    list-style-type: none;
+    padding: 0;
+    display: none;
+  }
+  
+  #password-rules li {
+    margin-bottom: 5px;
+    color: #666;
+  }
+  
+  progress {
+    width: 100%;
+    display: none;
+    /* background: #fff; */
+  }
+  
+  progress::-webkit-progress-value {
+    background-color: red;
+  }
+  
+  progress::-moz-progress-bar {
+    background-color: rgb(255, 166, 0);
+  }
+  
+  progress::-ms-fill {
+    background-color: rgb(0, 255, 55);
+  }
+  
+  progress[value="100"]::-webkit-progress-value,
+  progress[value="100"]::-moz-progress-bar,
+  progress[value="100"]::-ms-fill {
+    background: green;
+  }
+
+  .alert-message {
+    text-align: center;
+    margin-bottom: 10px; /* Adjust margin as needed */
+    padding: 10px;
+    width: 19em;
+    height: 4em;
+    background-color: #f8d7da; /* Red background color */
+    color: #721c24; /* Dark red text color */
+    border: 1px solid #f5c6cb; /* Red border */
+    border-radius: 4px; /* Rounded corners */
+  }
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 600px){
+    .main-container{
+        margin-top: 1em;
+        margin-left: 0;
+    }
+    form input{
+        background: #EFEFEF;
+        color: #000;
+    }
+    form .signup{
+        background: #616060;
+        color: #EFEFEF;
+    }
+    form input, .signup{
+        width: 17em;
+    }
+    .alert{
+        width: 17em;
+    }
+    .alert-message {
+      width: 17em;
+      margin: 1.5em 0;
+    }
+    .logo{
+        height: 200px;
+        width: 240px;
+    }
+}
+
+/* Tablet Responsiveness */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .main-container{
+        margin-top: 2.5em;
+        margin-left: 0;
+    }
+    form input{
+        background: #EFEFEF;
+        color: #000;
+    }
+    form .signup{
+        background: #616060;
+        color: #EFEFEF;
+    }
+    form input, .signup{
+        font-size: 1.5em;
+        width: 20em;
+        margin: 1em 0;
+    }
+    .alert{
+        width: 20em;
+        font-size: 1.5em;
+    }
+    .alert-message {
+      font-size: 1.5em;
+      width: 20em;
+      margin: 1.5em 0;
+    }
+    p{
+        font-size: 1.5em;
+    }
+}
