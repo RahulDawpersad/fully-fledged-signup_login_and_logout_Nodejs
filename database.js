@@ -15,4 +15,5 @@ db.connect((err) => {
   }
 });
 
-module.exports = db;
+// module.exports = db;
+module.exports = db.promise(); // Export the promise wrapper for using async/await
