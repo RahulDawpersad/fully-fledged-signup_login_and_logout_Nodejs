@@ -86,4 +86,4 @@ document.getElementById('loginForm').addEventListener('DOMContentLoaded', functi
   // Preloader Functionality
   setTimeout(function(){
     $('.wrapper').fadeOut();
-  }, 5000);
+  }, 3500);
