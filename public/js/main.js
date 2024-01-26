@@ -207,4 +207,4 @@ function updateSignUpButtonState() {
   // Preloader Functionality
   setTimeout(function(){
     $('.wrapper').fadeOut();
-  }, 3500);
+  }, 2800);

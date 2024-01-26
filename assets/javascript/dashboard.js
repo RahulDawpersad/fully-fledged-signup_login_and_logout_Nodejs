@@ -35,4 +35,4 @@ document.addEventListener("click", function (event) {
  // Preloader Functionality
  setTimeout(function(){
   $('.wrapper').fadeOut();
-}, 3500);
+}, 2800);
