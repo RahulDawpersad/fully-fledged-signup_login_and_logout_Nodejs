@@ -11,7 +11,7 @@ passInput.addEventListener("input", validatePassword);
 function validateEmail() {
   let email = emailInput.value;
   // let emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
-  let emailPattern = /^[a-z0-9]+@[a-z0-9.-]+\.(com)$/i;
+  let emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.(com)$/;
 
 
   if (!email.match(emailPattern)) {
