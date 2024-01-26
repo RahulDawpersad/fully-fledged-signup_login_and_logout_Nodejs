@@ -78,12 +78,13 @@ function updateSignUpButtonState() {
   }
 }
 
-// Form Resubmission
-document.getElementById('loginForm').addEventListener('DOMContentLoaded', function(){
-  e.preventDefault();
-})
 
   // Preloader Functionality
   setTimeout(function(){
     $('.wrapper').fadeOut();
   }, 2800);
+
+// Form Resubmission
+document.getElementById('loginForm').addEventListener('DOMContentLoaded', function(){
+  e.preventDefault();
+})

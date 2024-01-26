@@ -7,7 +7,6 @@ const MySQLStore = require('express-mysql-session')(session);
 
 // Configure MySQL session store
 const sessionStore = new MySQLStore({
-  /* MySQL connection options */
   host: 'b3j3ueoaxfknmx0du16n-mysql.services.clever-cloud.com',
   port: 3306,
   user: 'ukvxj5gys9pcsfkj',
