@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../database");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 
 // Default Route - Render index page
 router.get("/", (req, res) => {
@@ -32,7 +32,7 @@ router.post("/signup", async (req, res) => {
       return res.render("signup", { alertMessage: "Email or Password is already exists. Please try again." });
     }
 
-    // Hash the password
+    // Hash the password using bcryptjs
     const hashedPassword = await bcrypt.hash(password, 10);
 
     // Insert user into the database

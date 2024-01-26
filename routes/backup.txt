@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../database");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 
 // Default Route - Render index page
 router.get("/", (req, res) => {
@@ -113,7 +113,7 @@ router.get("/user/email", (req, res) => {
 
 router.get("/logout", (req, res) => {
   req.session.destroy();
-  res.redirect("/login");
+  res.redirect("/"); // Redirect to the index page ("/") after logout
 });
 
 module.exports = router;
