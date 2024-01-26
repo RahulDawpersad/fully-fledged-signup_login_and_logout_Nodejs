@@ -24,7 +24,7 @@ confirmPassInput.addEventListener("input", validateConfirmPassword);
 function validateEmail() {
   let email = emailInput.value;
   // let emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
-  let emailPattern = /^[a-zA-Z0-9]+@[a-zA-Z0-9.-]+\.(com)$/;
+  let emailPattern = /^[a-z0-9]+@[a-z0-9.-]+\.(com)$/i;
 
   if (!email.match(emailPattern)) {
     showError(emailError, "Invalid Email Address!");
