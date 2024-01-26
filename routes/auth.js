@@ -2,25 +2,6 @@ const express = require("express");
 const router = express.Router();
 const db = require("../database");
 const bcrypt = require("bcryptjs");
-const session = require('express-session');
-const MySQLStore = require('express-mysql-session')(session);
-
-// Configure MySQL session store
-const sessionStore = new MySQLStore({
-  host: 'b3j3ueoaxfknmx0du16n-mysql.services.clever-cloud.com',
-  port: 3306,
-  user: 'ukvxj5gys9pcsfkj',
-  password: 'csj17lHJGWlS5FEktS3u',
-  database: 'b3j3ueoaxfknmx0du16n',
-});
-
-// Use MySQL session store
-router.use(session({
-  secret: '[Q4GPJGf?"M<=9S',
-  resave: false,
-  saveUninitialized: false,
-  store: sessionStore, // Use MySQL session store
-}));
 
 // Default Route - Render index page
 router.get("/", (req, res) => {
