@@ -1,7 +1,7 @@
 const mysql = require("mysql2");
 
 const pool = mysql.createPool({
-  host: "byi0vexuchxu9przocoh-mysql.services.clever-cloud.comt",
+  host: "byi0vexuchxu9przocoh-mysql.services.clever-cloud.com",
   user: "uwobtzryrgmrgxco",
   password: "a9DB90uAeqRGvnElEEYf",
   database: "byi0vexuchxu9przocoh",
