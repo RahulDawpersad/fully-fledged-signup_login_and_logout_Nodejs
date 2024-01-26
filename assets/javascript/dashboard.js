@@ -31,3 +31,8 @@ document.addEventListener("click", function (event) {
     dropdown.classList.remove("show");
   }
 });
+
+ // Preloader Functionality
+ setTimeout(function(){
+  $('.wrapper').fadeOut();
+}, 5000);

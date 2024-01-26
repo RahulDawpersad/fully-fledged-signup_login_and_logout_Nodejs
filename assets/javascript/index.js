@@ -70,3 +70,7 @@
     }
   }())
   
+  // Preloader Functionality
+  setTimeout(function(){
+    $('.wrapper').fadeOut();
+  }, 5000);

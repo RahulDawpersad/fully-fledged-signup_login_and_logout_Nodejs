@@ -82,3 +82,8 @@ function updateSignUpButtonState() {
 document.getElementById('loginForm').addEventListener('DOMContentLoaded', function(){
   e.preventDefault();
 })
+
+  // Preloader Functionality
+  setTimeout(function(){
+    $('.wrapper').fadeOut();
+  }, 5000);

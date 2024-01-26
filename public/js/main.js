@@ -203,3 +203,8 @@ function updateSignUpButtonState() {
     btnSubmit.style.backgroundColor = ""; // Revert to default color
   }
 }
+
+  // Preloader Functionality
+  setTimeout(function(){
+    $('.wrapper').fadeOut();
+  }, 5000);
