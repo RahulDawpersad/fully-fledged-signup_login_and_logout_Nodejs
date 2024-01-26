@@ -2,6 +2,24 @@ const express = require("express");
 const router = express.Router();
 const db = require("../database");
 const bcrypt = require("bcryptjs");
+const session = require('express-session');
+const redis = require('redis');
+const RedisStore = require('connect-redis')(session);
+
+// Create a Redis client
+const redisClient = redis.createClient({
+  // Redis configuration options
+  // For example, host, port, password, etc.
+});
+
+// Use Redis as the session store
+router.use(session({
+  store: new RedisStore({ client: redisClient }),
+  secret: 'your-secret-key',
+  resave: false,
+  saveUninitialized: false,
+  // Other session options
+}));
 
 // Default Route - Render index page
 router.get("/", (req, res) => {
