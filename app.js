@@ -20,8 +20,8 @@ app.use(express.static(path.join(__dirname, 'vendor')));
 
 app.use('/', authRoutes);
 
-const PORT = process.env.PORT || 5000;
-// const IPADDRESS = '10.0.0.6';
+const PORT = process.env.PORT || 3306;
+
 app.listen(PORT, () => {
   console.log(`Server is running on port http://localhost:${PORT}`);
 });
